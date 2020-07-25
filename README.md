@@ -1,5 +1,7 @@
 # Basic-SQL-sample
 
+Below is a sample SQL code for everyday activities in a business. The purpose of this code is to highlight some of my abilities querying, building and organizing databases.
+
 ## Creating Tables, Delimeters and inserting values
 
 ```sql
