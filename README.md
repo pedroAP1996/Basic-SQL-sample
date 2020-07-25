@@ -43,7 +43,7 @@ DELIMITER ;
 
 ## Examples of Joining, Cases, Wildcards and Updating
 
-```ruby
+```mysql
 ##Using a SELF JOIN to find a list of clients who live in the same city
 SELECT a.city, CONCAT(a.first_name,' ',a.last_name client_1),
 CONCAT(b.first_name,' ',b.last_name client_2)
@@ -57,7 +57,7 @@ client_1,
 client_2;
 ```
 
-```ruby
+```mysql
 ##Using Cases to categorize client priority based on sales
 SELECT client.client_name, 
                     CASE WHEN total_sales<10000 THEN 'Low'
@@ -67,14 +67,14 @@ FROM client JOIN works_with ON (client.client_id=works_with.client_id)
 ORDER BY total_sales;
 ```
 
-```ruby
+```mysql
 ##Utilizing Wildcards to find all clients that are LLC's in the
 SELECT client.client_name
 FROM Database1.client
 WHERE client_name LIKE '%LLC%';
 ```
 
-```ruby
+```mysql
 ##Formating all client's phone numbers
 UPDATE Database1.client
 SET phone_number = CONCAT(SUBSTRING(phone_number,1,3),'-',
