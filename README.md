@@ -3,7 +3,7 @@
 #### Creating Tables, Delimeters, Inserting values and Joining
 
 ###Creating table of younger male employees
-```
+```ruby
 CREATE TABLE Young_Male_Employees(
 emp_id INT PRIMARY KEY,
 first_name VARCHAR(40),
