@@ -1,9 +1,9 @@
 # Basic-SQL-sample
 
-#### Creating Tables, Delimeters, Inserting values and Joining
+## Creating Tables, Delimeters, Inserting values and Joining
 
-###Creating table of younger male employees
 ```ruby
+###Creating table of younger male employees
 CREATE TABLE Young_Male_Employees(
 emp_id INT PRIMARY KEY,
 first_name VARCHAR(40),
@@ -16,11 +16,14 @@ super_id INT
 );
 ```
 
+```ruby
 ##Populating table from main employee data
 INSERT INTO Database1.Young_Male_Employees
 SELECT * FROM Database1.Employee WHERE sex='M'
 AND birth_day > '1993-01-01';
+```
 
+```ruby
 ##Creating a Trigger that will keep track of every employee hired by company
 DELIMITER $$
 CREATE
@@ -35,8 +38,10 @@ CREATE
             INSERT INTO employee_tracker VALUES('Added new employee');
         END IF;
     END$$
-DELIMITER ;    
+DELIMITER ;   
+```
 
+```ruby
 ##Using a SELF JOIN to find a list of clients who live in the same city
 SELECT a.city, CONCAT(a.first_name,' ',a.last_name client_1),
 CONCAT(b.first_name,' ',b.last_name client_2)
@@ -48,11 +53,12 @@ ORDER BY
 city,
 client_1,
 client_2;
+```
 
 
+## Examples of Cases, Wildcards and Updating
 
-##Examples of Cases, Wildcards and Updating
-
+```ruby
 ##Using Cases to categorize client priority based on sales
 SELECT client.client_name, 
                     CASE WHEN total_sales<10000 THEN 'Low'
@@ -60,14 +66,19 @@ SELECT client.client_name,
                          WHEN total_sales>100000 THEN 'High' END AS Priority 
 FROM client JOIN works_with ON (client.client_id=works_with.client_id)
 ORDER BY total_sales;
+```
 
+```ruby
 ##Utilizing Wildcards to find all clients that are LLC's in the
 SELECT client.client_name
 FROM Database1.client
 WHERE client_name LIKE '%LLC%';
+```
 
+```ruby
 ##Formating all client's phone numbers
 UPDATE Database1.client
 SET phone_number = CONCAT(SUBSTRING(phone_number,1,3),'-',
 SUBSTRING(phone_number, 4,3),'-',
 SUBSTRING(phone_number, 7,4));
+```
