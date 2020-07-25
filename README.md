@@ -1,8 +1,9 @@
 # Basic-SQL-sample
 
-## Creating Tables, Delimeters, Inserting values and Joining
+#### Creating Tables, Delimeters, Inserting values and Joining
 
-##Creating table of younger male employees
+###Creating table of younger male employees
+```
 CREATE TABLE Young_Male_Employees(
 emp_id INT PRIMARY KEY,
 first_name VARCHAR(40),
@@ -13,6 +14,7 @@ SALARY INT,
 branch_id INT,
 super_id INT
 );
+```
 
 ##Populating table from main employee data
 INSERT INTO Database1.Young_Male_Employees
