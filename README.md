@@ -2,7 +2,7 @@
 
 ## Creating Tables, Delimeters and inserting values
 
-```ruby
+```sql
 ###Creating table of younger male employees
 CREATE TABLE Young_Male_Employees(
 emp_id INT PRIMARY KEY,
