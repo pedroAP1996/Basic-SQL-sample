@@ -16,14 +16,14 @@ super_id INT
 );
 ```
 
-```ruby
+```sql
 ##Populating table from main employee data
 INSERT INTO Database1.Young_Male_Employees
 SELECT * FROM Database1.Employee WHERE sex='M'
 AND birth_day > '1993-01-01';
 ```
 
-```ruby
+```mysql
 ##Creating a Trigger that will keep track of every employee hired by company
 DELIMITER $$
 CREATE
