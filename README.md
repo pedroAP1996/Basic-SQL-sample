@@ -1,6 +1,6 @@
 # Basic-SQL-sample
 
-Below is a sample SQL code for everyday activities in a business. The schema used for this code is composed of two main sets of data, one with all of information from the business' employees, and one with all the client's. The purpose of this code is to highlight some of my abilities querying, building and organizing databases.
+Below is a sample SQL code for everyday activities in a business. The schema used for this code is composed of two main sets of data, one with the information from the business' employees, and one with all the client's. The purpose of this code is to highlight some of my abilities querying, building and organizing databases.
 
 ## Creating Tables, Delimeters and inserting values
 
