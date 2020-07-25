@@ -1,6 +1,6 @@
 # Basic-SQL-sample
 
-## Creating Tables, Delimeters, Inserting values and Joining
+## Creating Tables, Delimeters and inserting values
 
 ```ruby
 ###Creating table of younger male employees
@@ -41,6 +41,8 @@ CREATE
 DELIMITER ;   
 ```
 
+## Examples of Joining, Cases, Wildcards and Updating
+
 ```ruby
 ##Using a SELF JOIN to find a list of clients who live in the same city
 SELECT a.city, CONCAT(a.first_name,' ',a.last_name client_1),
@@ -54,9 +56,6 @@ city,
 client_1,
 client_2;
 ```
-
-
-## Examples of Cases, Wildcards and Updating
 
 ```ruby
 ##Using Cases to categorize client priority based on sales
